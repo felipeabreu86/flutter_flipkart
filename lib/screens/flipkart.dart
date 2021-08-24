@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_flipkart/widgets/bottomSheetContainer.dart';
+import 'package:flutter_flipkart/widgets/menuSripe.dart';
 import 'package:flutter_flipkart/widgets/searchBar.dart';
 
 class FlipKart extends StatefulWidget {
@@ -52,6 +53,10 @@ class _FlipKartState extends State<FlipKart> {
         child: Column(
           children: [
             SearchBar(),
+            SizedBox(
+              height: 5.0,
+            ),
+            MenuStripe(),
           ],
         ),
       ),
