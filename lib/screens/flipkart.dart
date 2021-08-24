@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_flipkart/widgets/bottomSheetContainer.dart';
+import 'package:flutter_flipkart/widgets/itemCard.dart';
 import 'package:flutter_flipkart/widgets/menuSripe.dart';
 import 'package:flutter_flipkart/widgets/offerSlider.dart';
 import 'package:flutter_flipkart/widgets/searchBar.dart';
@@ -59,6 +60,22 @@ class _FlipKartState extends State<FlipKart> {
             ),
             MenuStripe(),
             OfferSlider(),
+            Container(
+              color: Colors.white,
+              child: Row(
+                children: [
+                  ItemCard(),
+                  ItemCard(
+                    imageUrl: 'assets/images/electronic.png',
+                    offer: 'Min. 60% off',
+                  ),
+                  ItemCard(
+                    imageUrl: 'assets/images/mobiles.png',
+                    offer: 'Min. 30% off',
+                  ),
+                ],
+              ),
+            ),
           ],
         ),
       ),
