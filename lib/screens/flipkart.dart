@@ -76,6 +76,96 @@ class _FlipKartState extends State<FlipKart> {
                 ],
               ),
             ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    'Discounts for You',
+                    style: TextStyle(
+                        fontWeight: FontWeight.w700,
+                        fontSize: 16.0,
+                        color: Colors.white),
+                  ),
+                  InkWell(
+                    onTap: () {},
+                    child: Container(
+                      height: 40.0,
+                      width: 80.0,
+                      decoration: BoxDecoration(
+                        color: Colors.yellow,
+                        borderRadius: BorderRadius.circular(12.0),
+                      ),
+                      child: Center(
+                        child: Text(
+                          'View all',
+                          style: TextStyle(fontWeight: FontWeight.w700),
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Container(
+              color: Colors.white,
+              height: 350.0,
+              child: Column(
+                children: [
+                  Expanded(
+                    child: Row(
+                      children: [
+                        Expanded(
+                          child: ItemCard(),
+                        ),
+                        Expanded(
+                          child: ItemCard(
+                            imageUrl: 'assets/images/electronic.png',
+                            offer: 'Min. 60% off',
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  Expanded(
+                    child: Row(
+                      children: [
+                        Expanded(
+                          child: ItemCard(
+                            imageUrl: 'assets/images/fashion.png',
+                            offer: 'Min. 60% off',
+                          ),
+                        ),
+                        Expanded(
+                          child: ItemCard(
+                            imageUrl: 'assets/images/Grocery.png',
+                            offer: 'Min. 20% off',
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            OfferSlider(),
+            Container(
+              color: Colors.white,
+              child: Row(
+                children: [
+                  ItemCard(),
+                  ItemCard(
+                    imageUrl: 'assets/images/electronic.png',
+                    offer: 'Min. 60% off',
+                  ),
+                  ItemCard(
+                    imageUrl: 'assets/images/mobiles.png',
+                    offer: 'Min. 30% off',
+                  ),
+                ],
+              ),
+            ),
           ],
         ),
       ),
