@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_flipkart/widgets/bottomSheetContainer.dart';
+import 'package:flutter_flipkart/widgets/searchBar.dart';
 
 class FlipKart extends StatefulWidget {
   const FlipKart({Key? key}) : super(key: key);
@@ -47,6 +48,13 @@ class _FlipKartState extends State<FlipKart> {
         ],
       ),
       bottomSheet: BottomSheetContainer(),
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            SearchBar(),
+          ],
+        ),
+      ),
     );
   }
 }
